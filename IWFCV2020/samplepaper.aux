@@ -1,0 +1,47 @@
+\relax 
+\@writefile{toc}{\contentsline {title}{Optimizing the Computational Efficiency of 3D Segmentation Models for Connectomics}{1}}
+\@writefile{toc}{\authcount {5}}
+\@writefile{toc}{\contentsline {author}{ Weihao Zhuang \and Hascoet Tristan \and Ryoichi Takashima \and Tetsuya Takiguchi \and Yasuo Ariki }{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{lee2017superhuman}
+\citation{ronneberger2015u}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Illustration of the 3-step segmentation pipeline. This paper focuses solely on increasing the computational efficiency of the first step. \relax }}{2}}
+\citation{lee2017superhuman}
+\citation{lee2017superhuman}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Baseline model Analysis}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Baseline model}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Illustration of the baseline model architecture (drawn from \cite  {lee2017superhuman}). We adapt this architecture to the specific anisometry of our dataset by replacing the 2D sampling of lower layers by 3D sampling operations ($2 \times 2 \times 2$). \relax }}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Model analysis}{3}}
+\citation{he2016deep}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Baseline model analysis. The $x$ axis, shared by all plots, represents the different convolution layers of the model in the order of their processing. (a) Number of operation $O(l)$ of each layer. (b) Computational efficiency $E(l)$ of each layer. (c) Time $t(l)$ spent in the computation of each layer For each layer, the computation of the forward pass is shown in blue, backward pass operations in yellow, while green measurments represent the full (forward + backward) operations \relax }}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {FLOP}}}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {FLOPs}}}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Time}}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Baseline Model Optimization}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces FLOP distribution among the layers of two different models: (a) a 2D ResNet, and (b) the baseline 3D U-Net\relax }}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {ResNet}}}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {3D UNet}}}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Architectural optimization}{5}}
+\citation{chen2018tvm}
+\citation{chetlur2014cudnn}
+\citation{chen2018tvm}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces FLOP optimization\relax }}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Implementation optimization}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Computational efficiency achieved by our model using (a) cudnn kernels and (b) custom AutoTVM kernels\relax }}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Pytorch (cuDNN kernel function)}}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {TVM (autotuing kernel function)}}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiment}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Dataset}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Results}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Experiment Results\relax }}{8}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:1}{{1}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Future Work}{8}}
+\bibstyle{splncs04}
+\bibdata{samplepaper}
+\bibcite{chen2018tvm}{1}
+\bibcite{chetlur2014cudnn}{2}
+\bibcite{he2016deep}{3}
+\bibcite{lee2017superhuman}{4}
+\bibcite{ronneberger2015u}{5}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{9}}
